@@ -19,12 +19,87 @@
  */
 
 package homework3;
+import java.util.Arrays;
+import java.util.Scanner;
 
-public class homework3task1 {
+public class HomeWork3task1 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String [] args){
 
+		int[] inputarray = new int[10];
+		initarray(inputarray);
+		printarray(inputarray);
+
+		bubble(inputarray);
+		printarray(inputarray);
+
+		selections(inputarray);
+		printarray(inputarray);
+
+		Arrays.sort(inputarray); // (3rd method of sort.)
+		printarray(inputarray);
+
+		even(inputarray);
+	}
+
+	// Init array
+	public static void initarray(int[] array){
+		Scanner scanner = new Scanner(System.in);
+		for (int i = 0; i < array.length ; i++) {
+			System.out.println("Enter numbers of array " + i + " :");
+			if (scanner.hasNextInt()) {
+				array[i] = scanner.nextInt();
+			} else {
+				System.out.println("Error!");
+				i--;
+			}
+		}
+	}
+
+	// Print array
+	public static void printarray(int[] array){
+		for (int i = 0; i < array.length ; i++) {
+			System.out.print("|" + array[i] );
+		}
+		System.out.println();
+	}
+
+	// Bubble (1st method)
+	public static void bubble(int[] array){
+		for(int i = array.length - 1 ; i > 0; i--){
+			for(int j = 0; j < i ;j++){
+				int t;
+				if (array[j] > array[j+1]) {
+					t = array[j+1];
+					array[j+1] = array[j];
+					array[j] = t;
+				}
+			}
+		}
+	}
+
+	// Select (2nd method of sort.)
+	public static void selections(int[] array){
+		for(int i = 0; i < array.length; i++){
+			for (int j = i + 1 ; j < array.length; j++) {
+				int k;
+				if(array[j] < array[i]){
+					k = array[j];
+					array[j] = array[i];
+					array[i] = k;
+				}
+			}
+		}
+	}
+
+	// Even print
+	public static void even(int[] array){
+		System.out.println("Even numbers : ");
+		for (int i = 0; i <array.length ; i++) {
+			if (array[i]%2 == 0) {
+				System.out.print("|" + array[i]);
+			}
+		}
 	}
 
 }
