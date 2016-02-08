@@ -1,6 +1,5 @@
 /*
- * 4. Имеется целое число (любое), это число — сумма денег в рублях.
- *  Вывести это число, добавив к нему слово «рублей» в правильном падеже.
+ * 4. РРјРµРµС‚СЃСЏ С†РµР»РѕРµ С‡РёСЃР»Рѕ (Р»СЋР±РѕРµ), СЌС‚Рѕ С‡РёСЃР»Рѕ вЂ” СЃСѓРјРјР° РґРµРЅРµРі РІ СЂСѓР±Р»СЏС…. Р’С‹РІРµСЃС‚Рё СЌС‚Рѕ С‡РёСЃР»Рѕ, РґРѕР±Р°РІРёРІ Рє РЅРµРјСѓ СЃР»РѕРІРѕ В«СЂСѓР±Р»РµР№В» РІ РїСЂР°РІРёР»СЊРЅРѕРј РїР°РґРµР¶Рµ.
  */
 
 package homework1;
@@ -13,11 +12,11 @@ public class homework1task4 {
 		String text2 = Integer.toString(money); //convert the number to word
 		//last digit comparison
 		if (text2.endsWith("0") || text2.endsWith("5") || text2.endsWith("6") || text2.endsWith("7") || text2.endsWith("8") || text2.endsWith("9")) {
-			System.out.println(money + " рублей");
+			System.out.println(money + " пїЅпїЅпїЅпїЅпїЅпїЅ");
 		} else if (text2.endsWith("2") || text2.endsWith("3") || text2.endsWith("4")){
-			System.out.println(money + " рубля");
+			System.out.println(money + " пїЅпїЅпїЅпїЅпїЅ");
 		} else {
-			System.out.println(money + " рубль");
+			System.out.println(money + " пїЅпїЅпїЅпїЅпїЅ");
 		}
 			
 			
